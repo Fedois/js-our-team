@@ -17,7 +17,7 @@ const team = [
     {
         name: 'Angela Loper',
         rule: 'Social Media Manager',
-        image: 'angela-lopez-social-media-menager.jpg'
+        image: 'angela-lopez-social-media-manager.jpg'
     },
     {
         name: 'Scott Estrada',
@@ -41,7 +41,13 @@ for(let i = 0; i < team.length; i++){
     
     const main = document.querySelector('main')
     const dom = document.createElement('h1')
-    dom.innerHTML = team[i].name + '<br>' + team[i].rule + '<br>' + team[i].image;
+    dom.innerHTML = team[i].name + '<br>' + team[i].rule
+
+    const img = document.createElement('img')
+    img.src = 'img/' + team[i].image
+    
+    
     main.append(dom)
+    dom.append(img)
 
 }
